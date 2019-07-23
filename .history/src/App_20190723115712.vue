@@ -6,7 +6,7 @@
       <router-view></router-view>
     </el-header>
     <el-main> 
-      <el-button v-on:click="greet" v-bind="name">点击</el-button>
+      <el-button v-on:click="greet">点击</el-button>
       {{ name }}
     </el-main>
   </el-container>
@@ -25,11 +25,10 @@ export default {
       greet:function(event){
      //https://87298455.yuhouchuxing.cn/iem/index.php/Test/test
     //     http://localhost/boqian/index.php/Welcome/test
-        this.$axios.post('https://87298455.yuhouchuxing.cn/iem/index.php/Test/test', {
+        this.$axios.post('http://localhost/boqian/index.php/Welcome/test', {
          
       })
       .then(function (response) {
-        this.name = response.data.name;
         console.log(response);
       })
       .catch(function (error) {

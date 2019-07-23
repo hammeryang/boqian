@@ -6,7 +6,7 @@
       <router-view></router-view>
     </el-header>
     <el-main> 
-      <el-button v-on:click="greet" v-bind="name">点击</el-button>
+      <el-button v-on:click="greet">点击</el-button>
       {{ name }}
     </el-main>
   </el-container>
@@ -29,7 +29,6 @@ export default {
          
       })
       .then(function (response) {
-        this.name = response.data.name;
         console.log(response);
       })
       .catch(function (error) {

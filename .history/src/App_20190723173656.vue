@@ -6,7 +6,7 @@
       <router-view></router-view>
     </el-header>
     <el-main> 
-      <el-button v-on:click="greet" v-bind="name">点击</el-button>
+      <el-button v-on:click="greet" v-bind:name="name">点击</el-button>
       {{ name }}
     </el-main>
   </el-container>
