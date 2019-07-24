@@ -3,11 +3,12 @@
     <el-container>
   <el-container>
     <el-header class="navbar">
+
       <router-view></router-view>
+    
     </el-header>
-    <el-main> 
-      <el-button v-on:click="greet" v-bind="name">点击</el-button>
-      {{ name }}
+    <el-main>
+      主要内容 
     </el-main>
   </el-container>
 </el-container>
@@ -18,24 +19,30 @@
 export default {
     data() {
       return {
-       name:"ssss"
+       name:1
       }
     },
     methods:{
-      greet:function(event){
-     //https://87298455.yuhouchuxing.cn/iem/index.php/Test/test
-    //     http://localhost/boqian/index.php/Welcome/test
-        this.$axios.post('https://87298455.yuhouchuxing.cn/iem/index.php/Test/test', {
-         
-      })
-      .then(function (response) {
-        this.name = response.data.name;
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-    })
+
+      greet:function(){
+        return this.name = this.name+1;
       }
+
+
+    //   greet:function(event){
+    //  //https://87298455.yuhouchuxing.cn/iem/index.php/Test/test
+    // //     http://localhost/boqian/index.php/Welcome/test
+    //     this.$axios.post('https://87298455.yuhouchuxing.cn/iem/index.php/Test/test', {
+         
+    //   })
+    //   .then(function (response) {
+    //     this.name = response.data.name;
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    // })
+    //   }
       
   }
 
@@ -63,7 +70,7 @@ export default {
     right: 0;
     height: 3.6rem;
     text-align: left;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     border-bottom: 1px solid #eaecef;
 }
