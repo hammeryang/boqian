@@ -2,7 +2,7 @@
     <div>
 
         <el-row>
-            <el-col  :md="8" :span="8" ><div class="grid-content bg-purple"><b>博谦</b></div></el-col>
+            <el-col  :md="8" :span="8" ><div class="grid-content bg-purple hh">博谦</div></el-col>
             <el-col  :md="4" :span="8">
                 <div class="grid-content bg-purple hh">
                     <el-input size="small"  v-model="input" placeholder="请输入内容">

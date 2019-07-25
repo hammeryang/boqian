@@ -7,9 +7,12 @@
       <router-view></router-view>
     
     </el-header>
-    <el-main>
-      主要内容 
-    </el-main>
+    <el-container>
+    <el-aside width="250px" style="background-color: rgb(255, 255, 255)">
+      <router-view name='left'></router-view>
+    </el-aside>
+    <el-main>主要内容</el-main>
+  </el-container>
   </el-container>
 </el-container>
   </div>
@@ -74,12 +77,17 @@ export default {
     box-sizing: border-box;
     border-bottom: 1px solid #eaecef;
 }
-  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 461px;
+  }
   .el-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
-    line-height: 160px;
+    line-height: 461px;
   }
 
 </style>
